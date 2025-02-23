@@ -1,0 +1,11 @@
+tasks:
+  - init: mvn clean install -DskipTests
+    command: mvn exec:java -Dexec.mainClass="BasicSeleniumTest"
+vscode:
+  settings:
+    java.configuration.updateBuildConfiguration: "automatic"
+ports:
+  - port: 6080
+    onOpen: open-browser
+  - port: 7900
+    onOpen: open-browser
